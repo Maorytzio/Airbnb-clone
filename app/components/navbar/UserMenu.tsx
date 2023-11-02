@@ -7,6 +7,7 @@ import MenuItem from "./MenuItem";
 
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
@@ -72,14 +73,8 @@ const UserMenu = () => {
         >
           <div className="flex flex-col cursor-pointer">
             <>
-              <MenuItem 
-							onClick={()=>{}}
-							label="Login"
-							/>
-              <MenuItem 
-							onClick={()=>{}}
-							label="Sign up"
-							/>
+              <MenuItem onClick={() => {}} label="Login" />
+              <MenuItem onClick={() => {}} label="Sign up" />
             </>
           </div>
         </div>

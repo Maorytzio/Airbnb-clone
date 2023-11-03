@@ -1,3 +1,4 @@
+// "zustand" enables you to share state between different parts of your application
 import { create } from "zustand";
 
 

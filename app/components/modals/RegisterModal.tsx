@@ -11,6 +11,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import Modal from "./Modal";
 import Heading from "../Heading";
+import Input from "../inputs/Input";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal(); // for form visibility
@@ -39,26 +40,29 @@ const RegisterModal = () => {
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <Heading 
-      title="Welcome to Airbnb"
-      subtitle="create an Account"
+      <Heading title="Welcome to Airbnb" subtitle="create an Account" />
+      <Input
+        id="email"
+        label="Emial"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
       />
-      <Input/>
     </div>
-  )
+  );
 
   return (
-		<Modal 
-		title="Register"
-		actionLabel="Continue"
-    body={bodyContent}
-		disabled={isLoading}
-		isOpen={registerModal.isOpen}
-		onClose={registerModal.onClose}
-		onSubmit={handleSubmit(onSubmit)}
-		/>
-
-	)
+    <Modal
+      title="Register"
+      actionLabel="Continue"
+      body={bodyContent}
+      disabled={isLoading}
+      isOpen={registerModal.isOpen}
+      onClose={registerModal.onClose}
+      onSubmit={handleSubmit(onSubmit)}
+    />
+  );
 };
 
 export default RegisterModal;

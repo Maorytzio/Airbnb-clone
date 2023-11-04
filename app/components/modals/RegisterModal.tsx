@@ -13,6 +13,7 @@ import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
 import toast from "react-hot-toast";
+import Button from "../Button";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal(); // for form visibility
@@ -72,11 +73,26 @@ const RegisterModal = () => {
     </div>
   );
 
+
+  const footerContent = (
+    <div className="flex flex-col gap-3 mt-3">
+      <hr/>
+      <Button
+      outline
+      label="Continue woth google"
+      icon={FcGoogle}
+      onClick={()=>{}}
+      />
+
+    </div>
+  )
+
   return (
     <Modal
       title="Register"
       actionLabel="Continue"
       body={bodyContent}
+      footer={footerContent}
       disabled={isLoading}
       isOpen={registerModal.isOpen}
       onClose={registerModal.onClose}

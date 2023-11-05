@@ -63,12 +63,16 @@ npx prisma db push
 
 ```
 
-### Start the app
+### Start the app in development 
 
 ```shell
 npm run dev
 ```
-
+### Prisma ORM commands
+```shell
+$ npx prisma init
+$ npx prisma db push
+```
 ## Available commands
 
 Running commands with npm `npm run [command]`

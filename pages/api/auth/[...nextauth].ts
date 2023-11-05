@@ -1,7 +1,7 @@
 import prisma from '@/app/libs/prismadb';
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { AuthOptions } from "next-auth";
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt';
+import nextAuth, { AuthOptions } from "next-auth";
 
 import CredentialsProvider from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
@@ -51,5 +51,15 @@ export const authOptions: AuthOptions = {
         return user;
       }
     }),
-  ]
-}
+  ],
+
+  pages: {
+    signIn: "/"
+  },
+  debug: process.env.NODE_ENV === 'development',
+  session: { strategy: "jwt" },
+  secret:process.env.NEXTAUTH_SECRET,
+
+};
+
+export default nextAuth(authOptions)

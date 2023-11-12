@@ -1,6 +1,5 @@
 "use client";
 
-import axios from "axios";
 import { signIn } from "next-auth/react";
 
 import { AiFillGithub } from "react-icons/ai";
@@ -22,6 +21,7 @@ const LoginModal = () => {
   const router = useRouter();
   const registerModal = useRegisterModal(); // for form visibility
   const loginModal = useLoginModal();
+
   const [isLoading, setIsLoading] = useState(false);
 
   const {

@@ -15,9 +15,10 @@ const CategoryInput: React.FC<CategoryInputProps> = ({
   selected,
   onClick,
 }) => {
+
   return (
     <div
-      onClick={() => onClick(label)}
+      onClick={() => onClick(label)}   // A way to pass data from the CategoryInput component backup to the parent (RentModal)
       className={`
       rounded-xl
       border-2

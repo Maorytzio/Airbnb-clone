@@ -22,7 +22,7 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
     "react-select": "^5.8.0",
-    "world-countries": "^5.0.0",
+    "world-countries": "^4.0.0",
     "zustand": "^4.4.5"
   },
   "devDependencies": {
